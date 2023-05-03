@@ -1,0 +1,52 @@
+
+<label>Time:{{now}}</label>
+<br/>
+<br/>
+<label>Start of game: {{startOfGame}}</label>
+<br/>
+<br/>
+
+<label >Number of moves: {{moves+ count}}  </label>
+
+
+<!-- <br/>
+<br/>
+<label *ngIf="totalTime >0 ">End of Game time: {{totalTime}}</label>
+<br/>
+<br/>
+<label *ngIf="duration1 >0 ">Total Game time: {{duration1}} Seconds </label> -->
+<br/>
+<br/>
+<table border="1">
+        <tr>
+            <th>Date And Time</th>
+            <th>Number of Moves</th>
+            <th>Game Time</th>
+            
+        </tr>
+        <tr *ngFor="let h of history">
+            
+            <td>{{h.date}}</td>
+            <td>{{h.moves}}</td>
+            <td>{{h.totalTime}}</td>
+        </tr>
+    </table>
+
+<p>
+    <span id="box" *ngFor="let block of boxes1 ; let i = index; trackBy: trackByFn "
+     (click)="bool ? playerClick (i,$event):null " >
+    
+        <img src="{{block.picName}}" width="100px" height="100px" />
+     
+       
+        
+        
+
+    </span>
+<p>
+        
+
+
+
+   
+   
